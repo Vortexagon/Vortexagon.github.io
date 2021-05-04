@@ -2,26 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --gradient-color-1: red;
-    --gradient-color-2: orange;
+    --gradient-color-1: cyan;
+    --gradient-color-2: yellow;
     --gradient-background: linear-gradient(
         45deg,
         var(--gradient-color-1),
         var(--gradient-color-2)
         );
 
-    --text-color: rgb(18, 18, 18);
-    --main-color: white;
-}
+    --text-color: white;
+    --main-color: rgb(18, 18, 18);
 
-html {
-    scroll-behavior: smooth;
+/*    --text-color: rgb(18, 18, 18);
+    --main-color: white;*/
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -48,15 +51,26 @@ main > * {
     grid-column: 2;
 }
 
-p {
-    text-align: justify;
-}
-
 @media screen and (max-width: 80ch) {
         main > :not(.fullwidth) {
         padding: 0.5em;
     }
 
+}
+
+p, li {
+    text-align: justify;
+    line-height: 2em;
+}
+
+li {
+    list-style-position: inside;
+}
+
+code {
+    background-color: rgba(100, 100, 100, 0.2);
+    padding: 0.08em 0.3em;
+    font-family: Fira Code, Consolas, monospace;
 }
 
 .fullwidth {
@@ -69,6 +83,8 @@ p {
     padding: 0.5em;
     font-weight: bolder;
 }
+
+/*====== Landing Section ======*/
 
 #landing-section {
     height: 100vh;
@@ -104,15 +120,11 @@ p {
     align-items: center;
 }
 
-p {
-    line-height: 2em;
-}
-
 /*====== Blockquote ======*/
 
 blockquote {
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     background-image: var(--gradient-background);
 
