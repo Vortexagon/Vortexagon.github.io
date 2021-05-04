@@ -59,7 +59,7 @@ main > * {
 }
 
 p, li {
-    text-align: justify;
+    /*text-align: justify;*/
     line-height: 2em;
 }
 
