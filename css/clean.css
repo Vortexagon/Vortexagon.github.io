@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --gradient-color-1: red;
+    --gradient-color-2: orange;
+    --gradient-background: linear-gradient(
+        45deg,
+        var(--gradient-color-1),
+        var(--gradient-color-2)
+        );
+
+    --text-color: rgb(18, 18, 18);
+    --main-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+	font-size: calc(16px + 0.25vw);
+    min-width: 320px;
+    font-family: Roboto, sans-serif;
+
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+
+/*====== Main Layout ======*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr min(80ch, 100%) 1fr;
+    grid-row-gap: 1em;
+}
+
+main > * {
+    grid-column: 2;
+}
+
+p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 80ch) {
+        main > :not(.fullwidth) {
+        padding: 0.5em;
+    }
+
+}
+
+.fullwidth {
+    grid-column: 1 / 4;
+}
+
+.cutout {
+    background-color: var(--main-color);
+    mix-blend-mode: multiply;
+    padding: 0.5em;
+    font-weight: bolder;
+}
+
+#landing-section {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Fira Code;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--main-color);
+
+    background-image: var(--gradient-background);
+}
+
+#landing-section a {
+
+    margin-top: 2em;
+
+    color: var(--main-color);
+
+    text-decoration: none;
+    padding: 0.5em;
+
+    border: 1px solid var(--main-color);
+    border-radius: 0.5em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    line-height: 2em;
+}
+
+/*====== Blockquote ======*/
+
+blockquote {
+    display: inline-flex;
+    justify-content: space-between;
+
+    background-image: var(--gradient-background);
+
+    padding: 1em;
+    color: var(--main-color);
+
+    font-family: Fira Code;
+}
+
+blockquote .quote-line-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 0.5em;
+}
+
+blockquote .quote-line-container .quote-line {
+    flex-grow: 1;
+    width: 1px;
+    background-color: var(--main-color);
+}
+
+blockquote .quote-line-container .quote-mark {
+    font-family: Fira Code;
+    font-size: clamp(2em, 10vw, 4em);
+
+    margin-bottom: -1ch;
+}
+
+blockquote .quote-container {
+    padding: 1em;
+}
+
+blockquote .quote-author::before {
+    content: "\2014\00A0";
+}
+
+blockquote .quote-author {
+    margin-top: 0.5em;
+    color: var(--main-color);
+    font-style: italic;
+}
+
+
+/*====== Emphasis elements ======*/
+
+em, strong, .emphasis {
+    background-image: var(--gradient-background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
