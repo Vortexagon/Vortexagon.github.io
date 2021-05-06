@@ -86,7 +86,7 @@ code {
     -webkit-text-fill-color: transparent;
 }
 
-a:not(#landing-section > a)::after {
+a:not(.down-link)::after {
     content: " ->";
 }
 
