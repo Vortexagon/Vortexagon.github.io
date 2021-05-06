@@ -80,7 +80,7 @@ code {
     grid-column: 1 / 4;
 }
 
-.emphasis, em, strong, a:not(#landing-section > a){
+.emphasis, em, strong, a:not(.down-link){
     background-image: var(--gradient-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
