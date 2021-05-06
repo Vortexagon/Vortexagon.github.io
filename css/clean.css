@@ -68,9 +68,10 @@ li {
 }
 
 code {
-    background-color: rgb(160, 160, 160, 0.3);
+    background-color: rgb(160, 160, 160, 0.4);
     padding: 0.08em 0.3em;
     font-family: var(--emphasis-font);
+    border-radius: 0.2em;
 }
 
 /*====== Special Classes ======*/
@@ -130,6 +131,38 @@ a {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+/*====== Stats Section ======*/
+section.stats {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+    padding: 0.5em;
+}
+
+
+@media screen and (max-width: 100ch) {
+        section.stats {
+        flex-wrap: wrap;
+    }
+
+}
+
+section.stats > div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    background-color: rgb(100, 100, 100, 0.4);
+    border-radius: 0.5em;
+
+    padding: 0.5em;
+    margin: 0.5em;
+
+    text-align: center;
 }
 
 /*====== Blockquote ======*/
