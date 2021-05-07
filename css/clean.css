@@ -160,7 +160,7 @@ section.stats > div {
     flex-direction: column;
     justify-content: space-around;
 
-    background-color: rgb(10, 10, 10, 0.1);
+    background-color: rgb(10, 10, 10, 0.2);
     border-radius: 0.5em;
 
     padding: 0.5em;
@@ -178,7 +178,7 @@ blockquote {
     background-image: var(--gradient-background);
 
     padding: 1em;
-    color: var(--emphasis-color);;
+    color: var(--emphasis-color);
 
     font-family: var(--emphasis-font);
     font-weight: bolder;
@@ -195,7 +195,7 @@ blockquote .quote-line-container {
 blockquote .quote-line-container .quote-line {
     flex-grow: 1;
     width: 1px;
-    background-color: var(--emphasis-color);;
+    background-color: var(--emphasis-color);
 }
 
 blockquote .quote-line-container .quote-mark {
