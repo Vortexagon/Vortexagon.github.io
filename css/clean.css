@@ -32,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
 
-	font-size: calc(14px + 0.25vw);
+	font-size: calc(12px + 0.25vw);
     min-width: 320px;
     font-family: var(--main-font);
 
@@ -81,7 +81,7 @@ code {
 }
 
 .emphasis, em, strong, a:not(.down-link){
-    background-image: var(--gradient-background);
+    background: var(--gradient-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -91,10 +91,9 @@ a:not(.down-link)::after {
 }
 
 a {
+    padding: 0.08em 0.3em;
     font-family: var(--emphasis-font);
-    padding: 0 0.2em;
     font-weight: bolder;
-    border-bottom: 0.1ch solid var(--gradient-background);
 }
 
 /*====== Landing Section ======*/
@@ -144,17 +143,18 @@ section.stats {
 }
 
 
-@media screen and (max-width: 100ch) {
+@media screen and (max-width: 75ch) {
         section.stats {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
 }
 
 section.stats > div {
     display: flex;
-    flex-wrap: nowrap;
+
     flex-direction: column;
+    justify-content: space-around;
 
     background-color: rgb(100, 100, 100, 0.4);
     border-radius: 0.5em;
