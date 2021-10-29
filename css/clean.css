@@ -82,17 +82,11 @@ code {
     grid-column: 1 / 4;
 }
 
-a:not(.down-link){
+a{
     background: var(--gradient-background);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
 
-/*a:not(.down-link)::after {
-    content: " ->";
-}*/
-
-a {
     padding: 0.08em 0;
     font-weight: bolder;
 }
@@ -115,22 +109,26 @@ a {
     background-image: var(--gradient-background);
 }
 
-#landing-section a {
+a.down-link {
+    -webkit-text-fill-color: var(--emphasis-color);
+    -webkit-background-clip: border-box;
+    background: none;
+    background-color: transparent;
 
     margin-top: 2em;
-    color: var(--emphasis-color);
     font-size: 0.7em;
 
     text-decoration: none;
     padding: 0.5em;
 
     border: 1px solid var(--emphasis-color);
-    border-radius: 0.5em;
+    /*border-radius: 0.5em;*/
+    transition: 0.5s
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+a.down-link:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
 }
 
 /*====== Stats Section ======*/
