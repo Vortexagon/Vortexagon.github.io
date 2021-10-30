@@ -11,8 +11,8 @@
         var(--gradient-color-2)
         );
 
-    --main-font: Montserrat;
-    --emphasis-font: Fira Code;
+    --main-font: Montserrat, sans-serif;
+    --emphasis-font: Fira Code, monospace;
 
     --main-color: rgb(32, 32, 32);
     --text-color: white;
