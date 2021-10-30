@@ -122,7 +122,6 @@ a.down-link {
     padding: 0.5em;
 
     border: 1px solid var(--emphasis-color);
-    /*border-radius: 0.5em;*/
     transition: 0.5s
 }
 
@@ -140,7 +139,8 @@ section.stats {
 
     padding: 0.5em;
     color: var(--emphasis-color);
-    background: var(--gradient-background)
+    background: var(--gradient-background);
+    border-radius: 0.25em;
 }
 
 
@@ -179,6 +179,8 @@ blockquote {
 
     font-family: var(--emphasis-font);
     font-weight: bolder;
+
+    border-radius: 0.25em;
 }
 
 blockquote .quote-line-container {
